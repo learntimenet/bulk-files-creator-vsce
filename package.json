@@ -1,0 +1,60 @@
+{
+  "name": "bulk-files-creator",
+  "displayName": "Bulk Files Creator",
+  "description": "Type a list of paths, one per line, and create all the files and folders in one step.",
+  "publisher": "learntime",
+  "version": "0.1.0",
+  "icon": "icon.png",
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "create files",
+    "new file",
+    "multiple files",
+    "bulk",
+    "batch",
+    "scaffold",
+    "folders",
+    "file list"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/learntimenet/file-snippets-vsce.git"
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "tsc -p ./ && node --test \"test/**/*.test.js\"",
+    "package": "npm test && vsce package",
+    "publish": "npm test && vsce publish"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "bulkFilesCreator.create",
+        "title": "Bulk Create Files and Folders"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "bulkFilesCreator.create",
+          "group": "navigation@9"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "~1.105.0",
+    "@vscode/vsce": "^3.2.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "vscode": "^1.105.0"
+  }
+}
