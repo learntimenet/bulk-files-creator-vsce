@@ -3,7 +3,7 @@
   "displayName": "Bulk Files Creator",
   "description": "Type a list of paths, one per line, and create all the files and folders in one step.",
   "publisher": "learntime",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "icon": "icon.png",
   "license": "MIT",
   "categories": [
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/learntimenet/file-snippets-vsce.git"
+    "url": "https://github.com/learntimenet/bulk-files-creator-vsce.git"
   },
   "activationEvents": [],
   "main": "./dist/extension.js",
